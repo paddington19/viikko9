@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.lang.reflect.Array;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 public class userListAdapter extends RecyclerView.Adapter<userViewHolder> {
@@ -18,6 +20,12 @@ public class userListAdapter extends RecyclerView.Adapter<userViewHolder> {
     public userListAdapter(Context context, ArrayList<User> users) {
         this.context = context;
         this.users = users;
+        Collections.sort(this.users, new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return o1.getLastName().compareTo(o2.getLastName());
+            }
+        });
     }
 
     @NonNull
