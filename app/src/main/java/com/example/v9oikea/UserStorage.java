@@ -42,7 +42,7 @@ public class UserStorage {
 
     public ArrayList<User> getUsers() {
         return users;
-    }
+    } /// changed
 
 
     public void saveUsers(Context context) {
