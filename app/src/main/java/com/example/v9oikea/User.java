@@ -1,6 +1,8 @@
 package com.example.v9oikea;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private String firstName;
     private String lastName;

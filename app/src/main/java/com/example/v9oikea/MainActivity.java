@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Load the user list from file
+        UserStorage.getInstance().loadUsers(this);
     }
 
 
@@ -61,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
                             "sähkötekniikka"));
                     break;
             }
+
+            // saving the stuff into a file
+
+            UserStorage.getInstance().saveUsers(this);
+
             Intent intent = new Intent(this, ListUserActivity.class);
             startActivity(intent);
         }
