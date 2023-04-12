@@ -8,123 +8,17 @@
     tools:layout_editor_absoluteX="-24dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <RadioGroup
-        android:id="@+id/radioGrouppi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/rbTITE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="tietotekniikka" />
-
-        <RadioButton
-            android:id="@+id/rbTUTA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="tuotantotalous" />
-
-        <RadioButton
-            android:id="@+id/rbLATE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="laskennallinen tekniikka" />
-
-        <RadioButton
-            android:id="@+id/rbSATE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="sähkötekniikka" />
-    </RadioGroup>
-
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="640dp"
-        android:onClick="addUser"
-        android:text="Lisää opiskelija"
+        android:id="@+id/switchButton"
+        android:layout_width="210dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:onClick="SwitchToAddUserReal"
+        android:text="Lisää ostos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textInputEtunimi"
-        android:layout_width="212dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Etunimi"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textInputSukunimi"
-        android:layout_width="222dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:hint="Sukunimi"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/textInputMeili"
-        android:layout_width="218dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="124dp"
-        android:ems="10"
-        android:hint="Sähköpostiosoite"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <CheckBox
-            android:id="@+id/checkBox7"
-            android:layout_width="128dp"
-            android:layout_height="wrap_content"
-            android:text="kandidaatin tutkinto" />
-
-        <CheckBox
-            android:id="@+id/checkBox6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Diplomi-insinöörin tutkinto" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tekniikan tohtorin tutkinto" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Uimamaisteri" />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

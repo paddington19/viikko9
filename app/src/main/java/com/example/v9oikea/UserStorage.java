@@ -44,10 +44,22 @@ public class UserStorage {
         return users;
     } /// changed
 
+    public void removeUser(String id) {
+        int i = 0;
+        for (User u : users) {
+            if (u.getId().equals(id)) {
+                break;
+
+            }
+            i++;
+        }
+        users.remove(i);
+    }
+
 
     public void saveUsers(Context context) {
         try {
-            ObjectOutputStream userWriter = new ObjectOutputStream(context.openFileOutput("users5555555555.data", Context.MODE_PRIVATE));
+            ObjectOutputStream userWriter = new ObjectOutputStream(context.openFileOutput("tiedottaidot11111.data", Context.MODE_PRIVATE));
             userWriter.writeObject(users);
             userWriter.close();
         } catch (IOException e) {
@@ -57,7 +69,7 @@ public class UserStorage {
     }
     public void loadUsers(Context context) {
         try {
-            ObjectInputStream userReader = new ObjectInputStream(context.openFileInput("users5555555555.data"));
+            ObjectInputStream userReader = new ObjectInputStream(context.openFileInput("tiedottaidot11111.data"));
             users = (ArrayList<User>) userReader.readObject();
             userReader.close();
         } catch (FileNotFoundException e) {

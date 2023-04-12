@@ -2,6 +2,7 @@ package com.example.v9oikea;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -20,12 +21,7 @@ public class userListAdapter extends RecyclerView.Adapter<userViewHolder> {
     public userListAdapter(Context context, ArrayList<User> users) {
         this.context = context;
         this.users = users;
-        Collections.sort(this.users, new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                return o1.getLastName().compareTo(o2.getLastName());
-            }
-        });
+
     }
 
     @NonNull
@@ -36,10 +32,15 @@ public class userListAdapter extends RecyclerView.Adapter<userViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull userViewHolder holder, int position) {
-        holder.userEtunimi.setText(users.get(position).getFirstName() + " " + users.get(position).getLastName());
+        holder.userEtunimi.setText(users.get(position).getFirstName());
         //holder.userSukunimi.setText(users.get(position).getLastName());
-        holder.userMeili.setText(users.get(position).getEmail());
-        holder.userTutkinto.setText(users.get(position).getDegreeProgram());
+        //holder.userMeili.setText(users.get(position).getEmail());
+        //holder.userTutkinto.setText(users.get(position).getDegreeProgram());
+        holder.removeImage.setOnClickListener(view -> {
+            UserStorage.getInstance().removeUser(users.get(position).getId());
+            notifyItemRemoved(position);
+
+        });
 
     }
 

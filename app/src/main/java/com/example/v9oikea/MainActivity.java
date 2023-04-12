@@ -23,54 +23,17 @@ public class MainActivity extends AppCompatActivity {
         UserStorage.getInstance().loadUsers(this);
     }
 
+    public void SwitchToAddUserReal(View view) {
+        Intent intent = new Intent(this, AddUserActivity.class);
+        startActivity(intent);
+    }
 
-        public void addUser(View view) {
-            RadioGroup radioGrouppi = findViewById(R.id.radioGrouppi);
-            textInput = findViewById(R.id.textInputEtunimi);
-            textInput2 = findViewById(R.id.textInputSukunimi);
-            textInput3 = findViewById(R.id.textInputMeili);
+    public void SwitchToAddUser(View view) {
+        Intent intent = new Intent(this, ListUserActivity.class);
+        startActivity(intent);
+    }
 
-            switch (radioGrouppi.getCheckedRadioButtonId()) {
-                case R.id.rbTITE:
-                    UserStorage.getInstance().addUser(new User(
-                            textInput.getText().toString(),
-                            textInput2.getText().toString(),
-                            textInput3.getText().toString(),
-                            "tietotekniikka"));
-                    break;
 
-                case R.id.rbTUTA:
-                    UserStorage.getInstance().addUser(new User(
-                            textInput.getText().toString(),
-                            textInput2.getText().toString(),
-                            textInput3.getText().toString(),
-                            "tuotantotalous"));
-                    break;
-
-                case R.id.rbLATE:
-                    UserStorage.getInstance().addUser(new User(
-                            textInput.getText().toString(),
-                            textInput2.getText().toString(),
-                            textInput3.getText().toString(),
-                            "laskennallinen tekniikka"));
-                    break;
-
-                case R.id.rbSATE:
-                    UserStorage.getInstance().addUser(new User(
-                            textInput.getText().toString(),
-                            textInput2.getText().toString(),
-                            textInput3.getText().toString(),
-                            "sähkötekniikka"));
-                    break;
-            }
-
-            // saving the stuff into a file
-
-            UserStorage.getInstance().saveUsers(this);
-
-            Intent intent = new Intent(this, ListUserActivity.class);
-            startActivity(intent);
-        }
 }
 
 

@@ -8,10 +8,28 @@
 
     <Button
         android:id="@+id/confirmButton"
-        android:layout_width="240dp"
-        android:layout_height="159dp"
+        android:layout_width="207dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="408dp"
         android:onClick="addUser"
         android:text="Vahvista valintasi"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/productName"
+        android:layout_width="227dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:hint="Ostoksen nimi..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

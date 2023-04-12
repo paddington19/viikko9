@@ -9,15 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class userViewHolder extends RecyclerView.ViewHolder {
-    ImageView imageView;
+    ImageView imageView, removeImage, editImage;
 
-    TextView userEtunimi, userSukunimi, userMeili, userTutkinto;
+    TextView userEtunimi;
     public userViewHolder(@NonNull View itemView) {
         super(itemView);
         imageView = itemView.findViewById(R.id.imageView);
         userEtunimi = itemView.findViewById(R.id.txtUserEtunimi);
-        userTutkinto = itemView.findViewById(R.id.txtUserTutkinto);
-        userMeili = itemView.findViewById(R.id.txtUserMeili);
+        editImage = itemView.findViewById(R.id.imgEdit);
+        removeImage = itemView.findViewById(R.id.imgRemove);
 
     }
 }

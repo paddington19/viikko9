@@ -8,13 +8,13 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String degreeProgram;
+    protected String id;
 
 
-    public User(String firstName, String lastName, String email, String degreeProgram) {
+
+    public User(String firstName) {
         this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.degreeProgram = degreeProgram;
+        id = "NCC-" + (int)(Math.random() * 90000 + 1000);
     }
 
 
@@ -37,4 +37,7 @@ public class User implements Serializable {
     }
 
 
+    public String getId() {
+        return this.id;
+    }
 }

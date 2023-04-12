@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_marginTop="5dp"
@@ -15,26 +16,53 @@
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtUserEtunimi"
-            android:layout_width="match_parent"
+            android:layout_width="219dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/txtUserMeili"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/txtUserTutkinto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgRemove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgRemove"
+            android:src="@drawable/edit" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="text"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/imgEdit"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imgEdit"
+            app:layout_constraintTop_toBottomOf="@+id/imgEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
